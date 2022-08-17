@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+       body{
+           background-color: black;
+       }
+       .parent{
+            display: flex;
+            justify-content: space-around;
+            /* border: 2px solid red;
+             */
+
+        }
+        .parent-one{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* margin: 0 156px; */
+            /* border: 2px solid red; */
+
+        }
+
+        /* .parent-wrapper{
+            display: flex;
+            align-items: center;
+            margin: 0 140px 0 140px;
+        } */
+        .container{
+
+            border: 2px solid black;
+            height: 150px;
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        .transparent{
+            background-color: transparent;
+        }
+        #box-1{
+            background-color: #fffb00;
+        }
+        #box-2{
+            background-color: rgb(255, 145, 0);
+        }
+        #box-3{
+            background-color: rgb(51, 255, 0);
+        }
+        #box-4{
+            background-color: rgb(0, 255, 255);
+        }
+
+        .odd{
+            animation-name: colorful;
+            animation-duration: 500ms;
+            animation-iteration-count: infinite;
+        }
+
+        .even{
+            animation-name: colorful-even;
+            animation-duration: 500ms;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes colorful-even {
+            0%{
+                background-color: transparent;
+            }
+            50%{
+                background-color: rgb(51, 255, 0);
+            }
+            100%{
+                background-color:  rgb(51, 255, 0);
+            }
+        }
+
+        @keyframes colorful{
+            0%{
+                background-color: #fffb00;
+            }
+            50%{
+                background-color: transparent;
+            }
+            100%{
+                background-color: #fffb00;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="container odd" ></div>
+        <div class="container even" id="box-1"></div>
+        <div class="container odd" id="box-2"></div>
+        <div class="container even" id="box-2"></div>
+        <div class="container odd" id="box-3"></div>
+        <div class="container even" id="box-2"></div>
+        <div class="container odd" id="box-4"></div>
+    </div>
+    
+    
+        <div class="parent-one">
+            <div class="container even" id="box-3"></div>
+            <div class="container odd" id="box-1"></div>
+            <div class="container even" id="box-2"></div>
+            <div class="container odd" id="box-1"></div>
+            <div class="container even" id="box-2"></div>
+            <div class="container odd" id="box-2"></div>
+            <div class="container even" id="box-2"></div>
+        
+    </div>
+    <div class="parent">
+        <div class="container odd" id="box-1"></div>
+        <div class="container  even" id="box-2"></div>
+        <div class="container odd" id="box-3"></div>
+        <div class="container even" id="box-4"></div>
+        <div class="container odd" id="box-2"></div>
+        <div class="container even" id="box-2"></div>
+        <div class="container odd" id="box-2"></div>
+    </div>
+   
+    <script>
+
+    </script>
+</body>
+</html>
